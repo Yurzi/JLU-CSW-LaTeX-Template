@@ -1,0 +1,32 @@
+\documentclass[a4paper]{jluCSWThesis}
+
+\hypersetup{
+  pdftitle={<your title>},
+  pdfkeywords={<keyword1, keyword2>},
+  pdfcreator={<your name>},
+}
+
+\begin{document}
+\pagestyle{toc}
+\frontmatter
+\input{before_toc.tex}
+\clearpage
+\tableofcontents
+
+\mainmatter
+\pagestyle{plain}
+\input{chap/chap.01.intro.tex}
+\input{chap/chap.02.main.tex}
+
+\backmatter
+% bib part
+\input{references.tex}
+
+% appendix part
+\appendix
+\input{appendix.tex}
+
+% thanks part
+\input{thanks.tex}
+
+\end{document}
