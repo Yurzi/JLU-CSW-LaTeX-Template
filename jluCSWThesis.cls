@@ -2,14 +2,16 @@
 \ProvidesClass{jluCSWThesis}
 	[2024/05/04 v0.01 JLU CSW 2024 Undergraduate Template]
 
+%--------- For Options --------%
 
 %-------- Options --------%
+\PassOptionsToPackage{AutoFakeBold}{xeCJK}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 
 \ProcessOptions\relax
 
 %-------- Base Class --------%
-\LoadClass[fontset=windows, zihao=-4]{ctexbook}
+\LoadClass[zihao=-4]{ctexbook}
 
 %-------- Packages --------%
 
@@ -64,17 +66,11 @@
 \hypersetup{hidelinks} % link's colorful border
 
 %-------- Fonts --------%
-% chinese
-\setCJKmainfont{SimSun}[AutoFakeBold]
-
-\setCJKfamilyfont{song}{SimSun}[AutoFakeBold]
-\newcommand{\song}{\CJKfamily{song}}
 
 % English & number
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Courier New}
-
 
 %-------- line space --------%
 \linespread{1.5}
@@ -112,19 +108,19 @@
 % use ctex's setup method
 \ctexset {
 	chapter = {
-		format=\song\zihao{3}\bfseries\centering,
+		format=\songti\zihao{3}\bfseries\centering,
 		number=\arabic{chapter},
 		beforeskip=8pt,
 		afterskip=16pt,
 		tocline=\CTEXifname{\protect\numberline{\CTEXthechapter}}{}#2
 	},
 	section = {
-		format=\song\zihao{4}\bfseries\raggedright,
+		format=\songti\zihao{4}\bfseries\raggedright,
 		beforeskip=13pt,
 		afterskip=13pt
 	},
 	subsection = {
-		format=\song\zihao{-4}\bfseries\raggedright,
+		format=\songti\zihao{-4}\bfseries\raggedright,
 		beforeskip=8pt,
 		afterskip=7pt
 	}
@@ -136,7 +132,7 @@
 % title
 \renewcommand{\contentsname}{目 \qquad 录}
 \setlength{\cftbeforetoctitleskip}{8pt}
-\renewcommand{\cfttoctitlefont}{\hfill\song\zihao{3}\bfseries}
+\renewcommand{\cfttoctitlefont}{\hfill\songti\zihao{3}\bfseries}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \setlength{\cftaftertoctitleskip}{16pt}
 
@@ -284,24 +280,24 @@
 
 	\vspace*{4pt}
 	\begin{center}
-    	\song\zihao{-3}\@zhtitle
+    	\songti\zihao{-3}\@zhtitle
     \end{center}
 
 	\vspace{1em}
 
 	\begin{center}
-		\song\zihao{4}\textbf{摘要}
+		\songti\zihao{4}\textbf{摘要}
 	\end{center}
 
 	\vspace{1em}
 
-	{\song\zihao{-4} \@zhabstract}
+	{\songti\zihao{-4} \@zhabstract}
 
 	\vspace{2.0em}
 
-	{\noindent\song\zihao{4}\textbf{关键词：}
+	{\noindent\songti\zihao{4}\textbf{关键词：}
 
-	\song\zihao{-4}\@zhkeywords
+	\songti\zihao{-4}\@zhkeywords
 	}
 }
 
@@ -346,10 +342,10 @@
   \thispagestyle{empty}
   \pdfbookmark[0]{吉林大学学士学位论文（设计）承诺书}{originalstatement}  
   \begin{center}
-    \song\zihao{3}\textbf{\  \\ \  \\ 吉林大学学士学位论文（设计）承诺书}
+    \songti\zihao{3}\textbf{\  \\ \  \\ 吉林大学学士学位论文（设计）承诺书}
   \end{center}
   
-  {\song\zihao{4}
+  {\songti\zihao{4}
     \vspace{2.7cm}
     本人郑重承诺：所呈交的学士学位毕业论文（设计），是本人在指
     导教师的指导下，独立进行实验、设计、调研等工作基础上取得的成
