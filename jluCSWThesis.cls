@@ -55,7 +55,6 @@
 \RequirePackage[style=gb7714-2015]{biblatex}
 \RequirePackage{hyperref}
 \renewcommand{\bibfont}{\small}
-\addbibresource{references.bib}
 
 % misc
 \RequirePackage{lipsum}
@@ -171,6 +170,85 @@
   \ifnum \c@chapter>\z@ \thechapter-\fi \@arabic\c@figure}
 \renewcommand{\thetable}{%
   \ifnum \c@chapter>\z@ \thechapter-\fi \@arabic\c@table}
+
+
+%-------- definition & examples etc.--------%
+
+\newtheoremstyle{jluplain}% <name>
+  {3pt}% <Space above>
+  {3pt}% <Space below>
+  {\kaishu}% <Body font>
+  {\parindent}% <Indent amount>
+  {\heiti}% <Theorem head font>
+  {}% <Punctuation after theorem head>
+  {.5em}% <Space after theorem head>
+  {}% <Theorem head spec (can be left empty, meaning ‘normal’)>
+
+\newtheoremstyle{jluremark}
+{12pt}
+{3pt}
+{}
+{}
+{\heiti}
+{}
+{.5em}
+{}
+
+
+\theoremstyle{jluplain}
+\newtheorem{example}{\heiti\small{{例}}}[chapter]
+\renewcommand{\theexample}{\thechapter-\arabic{example}}
+\newtheorem*{example*}{\heiti\small{{例}}}
+% \newtheorem{algorithm}{算法}[chapter]
+
+\newtheorem{theorem}{\heiti\small{{定理}}}[chapter]
+\renewcommand{\thetheorem}{\thechapter-\arabic{theorem}}
+\newtheorem*{theorem*}{\heiti\small{{定理}}}
+
+\newtheorem{definition}{定义}[chapter]
+\renewcommand{\thedefinition}{\thechapter-\arabic{definition}}
+\newtheorem*{definition*}{定义}
+
+\newtheorem{axiom}{\heiti\small{{公理}}}[chapter]
+\renewcommand{\theaxiom}{\thechapter-\arabic{axiom}}
+\newtheorem*{axiom*}{\heiti\small{{公理}}}
+
+\newtheorem{property}{\heiti\small{{性质}}}[chapter]
+\renewcommand{\theproperty}{\thechapter-\arabic{property}}
+\newtheorem*{property*}{\heiti\small{{性质}}}
+
+\newtheorem{proposition}{命题}[chapter]
+\renewcommand{\theproposition}{\thechapter-\arabic{proposition}}
+\newtheorem*{proposition*}{命题}
+
+\newtheorem{lemma}{\heiti\small{{引理}}}[chapter]
+\renewcommand{\thelemma}{\thechapter-\arabic{lemma}}
+\newtheorem*{lemma*}{\heiti\small{{引理}}}
+
+\newtheorem{corollary}{\heiti\small{{推论}}}[chapter]
+\renewcommand{\thecorollary}{\thechapter-\arabic{corollary}}
+\newtheorem*{corollary*}{\heiti\small{{推论}}}
+
+\newtheorem{condition}{\heiti\small{{条件}}}[chapter]
+\renewcommand{\thecondition}{\thechapter-\arabic{condition}}
+\newtheorem*{condition*}{\heiti\small{{条件}}}
+
+\newtheorem{conclusion}{\heiti\small{{结论}}}[chapter]
+\renewcommand{\theconclusion}{\thechapter-\arabic{conclusion}}
+\newtheorem*{conclusion*}{\heiti\small{{结论}}}
+
+\newtheorem{assumption}{\heiti\small{{假设}}}[chapter]
+\renewcommand{\theassumption}{\thechapter-\arabic{assumption}}
+\newtheorem*{assumption*}{\heiti\small{{假设}}}
+
+\theoremstyle{jluremark}
+\newtheorem{remark}{\heiti{\noindent{【注】}}}[chapter]
+\renewcommand{\theremark}{\thechapter-\arabic{remark}}
+\newtheorem*{remark*}{\heiti\noindent{{【注】}}}
+
+\newtheorem{notice}{\heiti{\noindent{【注意】}}}[chapter]
+\renewcommand{\thenotice}{\thechapter-\arabic{notice}}
+\newtheorem*{notice*}{\heiti\noindent{{【注意】}}}
 
 
 %-------- title page --------%
